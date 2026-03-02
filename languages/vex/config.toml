@@ -1,0 +1,4 @@
+name = "VEX"
+grammar = "vex"
+path_suffixes = ["vex", "vfl"]
+line_comments = ["//"]
