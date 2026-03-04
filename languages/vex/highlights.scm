@@ -79,6 +79,10 @@
 (member_expression
   member: (identifier) @variable.special)
 
+(member_expression
+  object: (identifier) @constant
+  (#eq? @constant "this"))
+
 ; ── Geometry attributes (VEX-specific) ────────────────────
 
 (attribute_access

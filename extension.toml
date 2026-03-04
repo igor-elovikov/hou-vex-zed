@@ -8,5 +8,5 @@ repository = "https://github.com/igor-elovikov/hou-vex-zed"
 snippets = ["./snippets/vex.json"]
 
 [grammars.vex]
-repository = "https://github.com/igor-elovikov/tree-sitter-vex.git"
-rev = "76b7625ec42a6722fea7e870f9bea72043d733da"
+repository = "file:///Users/elovikov/work/houdini/tree-sitter-vex"
+rev = "ee284a789fbdb28b5dccb3d51b99b8c134fb510a"
