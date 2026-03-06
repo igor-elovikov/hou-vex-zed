@@ -1,0 +1,77 @@
+{
+  "int": {
+    "body": ["int"]
+  },
+  "float": {
+    "body": ["float"]
+  },
+  "vector2": {
+    "body": ["vector2"]
+  },
+  "vector": {
+    "body": ["vector"]
+  },
+  "vector4": {
+    "body": ["vector4"]
+  },
+  "matrix2": {
+    "body": ["matrix2"]
+  },
+  "matrix3": {
+    "body": ["matrix3"]
+  },
+  "matrix": {
+    "body": ["matrix"]
+  },
+  "string": {
+    "body": ["string"]
+  },
+  "dict": {
+    "body": ["dict"]
+  },
+  "void": {
+    "body": ["void"]
+  },
+  "bsdf": {
+    "body": ["bsdf"]
+  },
+  "if": {
+    "body": ["if"]
+  },
+  "else": {
+    "body": ["else"]
+  },
+  "for": {
+    "body": ["for"]
+  },
+  "foreach": {
+    "body": ["foreach"]
+  },
+  "while": {
+    "body": ["while"]
+  },
+  "do": {
+    "body": ["do"]
+  },
+  "return": {
+    "body": ["return"]
+  },
+  "break": {
+    "body": ["break"]
+  },
+  "continue": {
+    "body": ["continue"]
+  },
+  "function": {
+    "body": ["function"]
+  },
+  "struct": {
+    "body": ["struct"]
+  },
+  "export": {
+    "body": ["export"]
+  },
+  "const": {
+    "body": ["const"]
+  }
+}

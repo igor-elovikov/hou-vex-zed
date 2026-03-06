@@ -352,9 +352,17 @@ def main():
         }
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    out_path = os.path.join(script_dir, "snippets", "vex.json")
-    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    snippets_dir = os.path.join(script_dir, "snippets")
+    os.makedirs(snippets_dir, exist_ok=True)
 
+    # Merge keyword snippets
+    keywords_path = os.path.join(script_dir, "vex-keywords.json")
+    if os.path.exists(keywords_path):
+        with open(keywords_path) as f:
+            keywords = json.load(f)
+        snippets.update(keywords)
+
+    out_path = os.path.join(snippets_dir, "vex.json")
     with open(out_path, "w") as f:
         json.dump(snippets, f, indent=2, ensure_ascii=False)
 
