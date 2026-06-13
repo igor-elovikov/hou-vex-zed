@@ -78,4 +78,4 @@ Description is: brief (`"""..."""`), then USAGES block, then body text (everythi
 python3 gen_snippets.py
 ```
 
-Requires `$HFS` to be set. Outputs to `snippets/vex.json`.
+Requires `$HFS` to be set. Outputs to `snippets/houdini-vex.json`.

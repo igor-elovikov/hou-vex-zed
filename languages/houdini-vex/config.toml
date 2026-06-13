@@ -4,6 +4,8 @@ path_suffixes = ["vex", "vfl"]
 line_comments = ["//"]
 block_comment = ["/*", "*/"]
 autoclose_before = ";:.,=}])` \n\t\""
+tab_size = 4
+hard_tab = false
 
 brackets = [
     { start = "(", end = ")", close = true, newline = true },
@@ -17,3 +19,6 @@ brackets = [
         "comment",
     ] },
 ]
+
+increase_indent_pattern = "\\{\\s*$"
+decrease_indent_pattern = "^\\s*\\}"

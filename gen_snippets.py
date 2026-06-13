@@ -66,7 +66,7 @@ def resolve_include(include_str, files):
     if path.startswith("/vex/"):
         # /vex/functions/foo -> functions/foo.txt
         zip_path = path[5:] + ".txt"  # strip /vex/
-    elif path.startswith("_") or not "/" in path:
+    elif path.startswith("_") or "/" not in path:
         # _common, _area_variadic -> functions/_common.txt
         zip_path = "functions/" + path + ".txt"
     else:
@@ -95,6 +95,7 @@ def resolve_include(include_str, files):
 
 def process_includes(text, files):
     """Resolve all :include directives in text."""
+
     def replace_include(m):
         return resolve_include(m.group(1), files)
 
@@ -294,9 +295,7 @@ def parse_vex_function(name, content, files):
             desc_parts.append(u)
 
     # Add body if it has content
-    body_cleaned = "\n".join(
-        line for line in body_text.split("\n")
-    ).strip()
+    body_cleaned = "\n".join(line for line in body_text.split("\n")).strip()
 
     if body_cleaned:
         desc_parts.append("")
@@ -334,7 +333,8 @@ def main():
 
     snippets = {}
     func_files = sorted(
-        name for name in files
+        name
+        for name in files
         if name.startswith("functions/")
         and name.endswith(".txt")
         and not name.startswith("functions/_")
@@ -362,7 +362,7 @@ def main():
             keywords = json.load(f)
         snippets.update(keywords)
 
-    out_path = os.path.join(snippets_dir, "vex.json")
+    out_path = os.path.join(snippets_dir, "houdini-vex.json")
     with open(out_path, "w") as f:
         json.dump(snippets, f, indent=2, ensure_ascii=False)
 
